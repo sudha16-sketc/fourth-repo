@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital
+        ,wght@0,400..900;1,400..900&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+        }
+
+        body {
+            background-color: rgb(53, 52, 52);
+
+        }
+
+        .left {
+            font-size: 3rem;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background-color: grey;
+
+        }
+
+        nav ul {
+            justify-content: center;
+            display: flex;
+        }
+
+        nav li {
+            list-style-type: none;
+            margin: 0 27px;
+            text-shadow: 15px 8px 10px rgba(28, 48, 224, 0.6);
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+
+            color: rgb(183, 178, 178);
+            font-size: 1.15rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 108px 0;
+            align-items: center;
+        }
+
+        .leftsection {
+            font-size: 3rem;
+
+        }
+
+        .leftsection .btn {
+            padding: 12px;
+            background-color: rgb(57, 54, 54);
+            color: white;
+            border: 2px solid white;
+            border-radius: 10px;
+            font-size: 20px;
+            box-shadow: 18px 18px 25px rgba(43, 61, 230, 0.6);
+        }
+
+        .rightsection img {
+            margin: 20px 30px 40px;
+            border-radius: 50%;
+            width: 400px;
+            height: 400px;
+            box-shadow: 18px 18px 25px rgba(43, 61, 230, 0.6);
+        }
+
+
+        .btn:hover {
+
+            color: rgb(183, 178, 178);
+            font-size: 1.15rem;
+        }
+
+        .purple {
+            color: white;
+            text-shadow: 18px 18px 15px rgba(27, 44, 204, 0.6);
+        }
+
+        #element {
+            color: white;
+            text-shadow: 18px 18px 15px rgba(27, 44, 204, 0.6);
+        }
+
+        .text-grey {
+            color: grey;
+        }
+
+        main hr {
+            background: rgb(68, 65, 65);
+            border: 0;
+            height: 1px;
+            margin: 40px 80px;
+        }
+
+
+        /* Profile Card */
+
+
+
+
+        /* Social Icons */
+        .social-icons {
+            margin: 33px 573px;
+            align-items: center;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 20px;
+            color: #007bff;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        .social-icons img {
+            width: 23px;
+            height: 23px;
+        }
+
+        /* Button */
+        .profile-btn {
+
+            display: inline-block;
+            margin-top: 0px 100px;
+            background: black;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: 0.3s;
+            align-items: center;
+        }
+
+
+        .profile-btn:hover {
+            background: rgb(104, 129, 232);
+            align-items: center;
+        }
+
+        .about {
+            font-size: 40px;
+            text-align: center;
+            text-shadow: 18px 18px 15px rgba(27, 44, 204, 0.6);
+
+        }
+
+        .aboutme {
+            font-size: 25px;
+            text-align: center;
+
+        }
+
+        section p {
+            text-align: center;
+            font-size: 20px;
+            margin: 23px 150px;
+            color: white;
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            height: 150px;
+        }
+
+        .secondsection p {
+            text-align: center;
+            font-size: 20px;
+        }
+
+
+        .project {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            list-style-type: none;
+        }
+
+        .projects {
+            font-size: 30px;
+            text-align: center;
+            text-shadow: 18px 18px 15px rgba(27, 44, 204, 0.6);
+            margin-bottom: 20px;
+        }
+
+        .projectboxs {
+            background-color: rgb(197, 193, 193);
+            width: 350px;
+            height: 232px;
+            border-radius: 23px;
+            margin-top: 1px;
+            box-shadow: 18px 5px 25px rgba(43, 61, 230, 0.6);
+        }
+
+        .projectboxs:hover {
+            background: white;
+            align-items: center;
+            height: 242px;
+            width: 360px;
+            box-shadow: 18px 18px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        .projectboxs>img {
+            border-radius: 23px;
+            margin: 27px;
+        }
+
+        .footer {
+            display: grid;
+        }
+
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            margin-top: 80px;
+            text-align: center;
+            color: black;
+        }
+
+
+        .contactus {
+            text-align: center;
+            font-size: 25px;
+            margin: 10px;
+            text-shadow: 18px 18px 15px rgba(27, 44, 204, 0.6);
+        }
+
+        .contactinput {
+            border: none;
+            padding: 24px;
+            padding-right: 170px;
+            margin: 24px 470px;
+            border-radius: 20px;
+            box-shadow: 18px 18px 25px rgba(43, 61, 230, 0.6);
+        }
+
+        .contact {
+            width: 300px;
+
+        }
+
+        .contactinput:hover {
+            box-shadow: 18px 18px 25px rgba(0, 0, 0, 0.6);
+            background-color: white;
+        }
+
+        .submit {
+            background-color: rgb(53, 52, 52);
+
+        }
+
+        .search img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+
+        }
+
+        .searchicon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .card-container {
+            perspective: 1000px;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 50px;
+        }
+
+        .card {
+            width: 250px;
+            height: 350px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+
+    
+        .card.flip {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 300px;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .front {
+            background-color: #505153;
+            color: white;
+            box-shadow: 18px 18px 25px rgba(43, 61, 230, 0.6);
+        }
+
+        .front img {
+            border-radius: 13px;
+            width: 250px;
+       
+        }
+
+        .back {
+            background-color: #6b706d;
+            color: white;
+            transform: rotateY(180deg);
+            box-shadow: 18px 18px 25px rgba(43, 61, 230, 0.6);
+        }
+
+        .back p {
+            margin: 12px;
+        }
+
+        .skill {
+            font-size: 40px;
+            text-align: center;
+            margin: 18px;
+            text-shadow: 18px 18px 15px rgba(27, 44, 204, 0.6);
+        }
+
+        .hr {
+            width: 100%;
+            background: linear-gradient(to right, #010828, #1526a9, #449bed, #1526a9, #010828);
+            margin: 16px;
+            height: 2px;
+            box-shadow: 18px 18px 25px rgba(43, 61, 230, 0.6);
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left"><img
+                    src="C:\Users\sudha\Downloads\DALL·E 2025-02-20 20.58.35 - A simple and modern avatar of a young, slightly fair brown-skinned tech enthusiast in a dark theme. The character wears a stylish, minimalistic hoodie.webp"
+                    alt="" width="80px" height="80px" style="border-radius: 50%;  box-shadow: 18px 5px 25px rgba(43, 61, 230, 0.6);">
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="">home</a></li>
+                    <li><a href="">about</a></li>
+                    <li><a href=""> serives</a></li>
+                    <li><a href=""> projects</a></li>
+                    <li><a href="">contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                My name is <span class="purple">Sudhakar</span>
+                <div>welcome to <br><span class="purple">
+                        my webpage </span><br> i am </div>
+                <span id="element">Web Developer</span>
+                <div class="buttons">
+                    <button class="btn">download resume</button>
+                    <button class="btn">visitGithub</button>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="C:\Users\sudha\Downloads\DALL·E 2025-02-20 20.58.35 - A simple and modern avatar of a young, slightly fair brown-skinned tech enthusiast in a dark theme. The character wears a stylish, minimalistic hoodie.webp"
+                    height="450px" width="200px">
+            </div>
+        </section>
+        <hr class="hr">
+        <section class="aboutsection">
+            <h1 class="about">About me </h1>
+            <h1 class="aboutme">Blockchain Student | Web Developer</h1>
+            <p>A motivated blockchain student with a strong foundation in web development and programming languages like
+                Java, C, C++, and JavaScript. Passionate about building decentralized applications and exploring
+                emerging technologies. Adept at problem-solving, coding, and continuous learning to stay ahead in the
+                tech industry.
+            </p>
+            <hr class="hr">
+        </section>
+        <section>
+            <div>
+                <h1 class="skill">Skills</h1>
+            </div>
+
+            <div class="card-container">
+                <div class="card" onclick="flipCard(this)">
+                    <div class="card-face front"><img src="https://cdn-icons-png.flaticon.com/128/16845/16845736.png">
+                    </div>
+                    <div class="card-face back">
+                        <p>ssential for structuring and styling web pages.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="flipCard(this)">
+                    <div class="card-face front"><img src="https://img.icons8.com/?size=96&id=TpULddJc4gTh&format=png">
+                    </div>
+                    <div class="card-face back">
+                        <p>trong for system programming, game development, and performance-critical applications.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="flipCard(this)">
+                    <div class="card-face front"><img src="https://img.icons8.com/?size=160&id=lTKW3iI3wIT0&format=png"
+                            alt="" width="200px" height="280px"></div>
+                    <div class="card-face back">
+                        <p>seful for backend development, Android apps, and large-scale systems.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="flipCard(this)">
+                    <div class="card-face front"><img src="https://img.icons8.com/?size=128&id=laVIsJnTtYoj&format=png"
+                            alt="" width="200px" height="280px"></div>
+                    <div class="card-face back">
+                        <p>dds interactivity and dynamic behavior to websites.</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr">
+        </section>
+
+        <section>
+
+            <div class="projects">
+                <h1>Projects</h1>
+                <div>
+                    <ul class="project">
+                        <li> <a href="C:\Users\sudha\OneDrive\Desktop\portfoli\portfolie.html">
+                                <div class="projectboxs"><img
+                                        src="C:\Users\sudha\OneDrive\Pictures\Screenshots\Screenshot 2025-02-14 215735.png"
+                                        alt="" width="300px" height="180px"></div>
+                            </a></li>
+                        <li> <a href="C:\Users\sudha\OneDrive\Desktop\portfoli\try - Copy.html">
+                                <div class="projectboxs"><img
+                                        src="C:\Users\sudha\OneDrive\Pictures\Screenshots\Screenshot 2025-02-14 215750.png"
+                                        alt="" width="300px" height="180px"></div>
+                            </a></li>
+                        <li> <a href="C:\Users\sudha\OneDrive\Desktop\clone netflix\web.html">
+                                <div class="projectboxs"><img
+                                        src="C:\Users\sudha\OneDrive\Pictures\Screenshots\Screenshot 2025-02-14 215805.png"
+                                        alt="" width="300px" height="180px"></div>
+                            </a></li>
+                        <li> <a href="C:\Users\sudha\OneDrive\Desktop\portfoli\aboutus.html">
+                                <div class="projectboxs"><img
+                                        src="C:\Users\sudha\OneDrive\Pictures\Screenshots\Screenshot 2025-02-14 215919.png"
+                                        alt="" width="300px" height="180px"></div>
+                            </a></li>
+                    </ul>
+        </section>
+        <a class="searchicon" href="https://www.google.com/">
+            <div class="search"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHlR0hmAfS4p81bmeHXBuGzCTQfpmYgz8wzQ&s"
+                    alt=""></div>
+        </a>
+    </main>
+    <footer>
+        <hr class="hr">
+        <div class="contactus">
+            <h1>Contact us</h1>
+        </div>
+        <div class="footer">
+
+
+            <input class="contactinput" type="text" placeholder="Enter your name " required>
+            <input class="contactinput" type="number" placeholder="Enter your number" required>
+            <input class="contactinput" type="email" placeholder="Enter your Email" required>
+            <button class="submit"><input class="contactinput" type="submit" placeholder="submit"></button>
+
+        </div>
+        <div class="footer-rights">www.sudhakar's portfolio.com
+            <br>+91 8855826963
+            <br>
+            sudhakarsutar101@gmail.com
+        </div>
+        <div class="profile-container">
+
+            <!-- Social Icons -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/sudhakar-sutar-801354321/overlay/about-this-profile/" target="">
+                    <img src="C:\Users\sudha\OneDrive\Desktop\download (1).png">
+                    linkedin</a>
+                <a href="https://github.com/sudha16-sketc" target="_blank">
+                    <img src="C:\Users\sudha\OneDrive\Desktop\images.png">
+                    GitHub</a>
+                <a href="https://www.instagram.com/sudhakarsutar101/" target="_blank">
+                    <img src="C:\Users\sudha\OneDrive\Desktop\download.jpg">
+                    instagram</a>
+            </div>
+    </footer>
+    <script>
+        function flipCard(card) {
+            card.classList.toggle("flip");
+        }
+    </script>
+
+</body>
+
+</html>
